@@ -1,0 +1,24 @@
+Noman Research — research-material license notice
+
+Copyright (c) 2026 Tao Tao.
+
+Unless a paper or individual file explicitly states otherwise, the original
+research manuscripts, appendices, original figures, aggregated result tables
+and publication documentation in this repository are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+License deed: https://creativecommons.org/licenses/by/4.0/
+Full governing legal terms: https://creativecommons.org/licenses/by/4.0/legalcode
+SPDX identifier: CC-BY-4.0
+
+Attribute the named author, paper title, version and license, and indicate
+changes. This notice identifies the license; it does not replace its legal text.
+
+Repository-maintenance software under tools/ and .github/workflows/ is licensed
+separately under the MIT License in tools/LICENSE. This is not a grant for any
+unpublished backtest engine or trading application.
+
+Third-party source material, linked publications, trademarks and market data
+are excluded from these grants. Raw or derived market records are not included.
+Contributions from other copyright holders must state their authorship and
+compatible licensing explicitly; do not assume ownership from this notice.

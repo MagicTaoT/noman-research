@@ -1,0 +1,633 @@
+{
+  "schema_version": 1,
+  "description": "Exact string-valued transcription of published aggregate tables; not raw market data.",
+  "tables": [
+    {
+      "source": "paper.md",
+      "section": "4. Data and empirical design",
+      "columns": [
+        "Design element",
+        "Registered value"
+      ],
+      "rows": [
+        [
+          "Product",
+          "Coinbase BTC-USD spot"
+        ],
+        [
+          "Slot and obligation",
+          "2 minutes; USD 10"
+        ],
+        [
+          "Predictor",
+          "720 completed slots; strictly lagged"
+        ],
+        [
+          "Passive policy",
+          "5 equal-cash percentile rungs; 1 bp minimum offset"
+        ],
+        [
+          "Backlog controller",
+          "alpha 0.5; passive plan capped at 5 slot budgets"
+        ],
+        [
+          "Catch-up",
+          "excess over 15-slot cap; next executable open"
+        ],
+        [
+          "Candle trigger",
+          "1-minute activation delay; 1 bp penetration"
+        ],
+        [
+          "Simulated fill",
+          "50% haircut; 1% of minute notional capacity"
+        ],
+        [
+          "Primary fees",
+          "15 bps passive; 30 bps taker; 2 bps taker slippage"
+        ],
+        [
+          "Bootstrap",
+          "stationary daily blocks; expected length 7 days; 10,000 replicates"
+        ],
+        [
+          "Primary threshold",
+          "one-sided lower 95% bound above 1 bp"
+        ]
+      ]
+    },
+    {
+      "source": "paper.md",
+      "section": "6.1 Wider fixed fee scenarios",
+      "columns": [
+        "Strategy",
+        "15/30 bps",
+        "35/75 bps",
+        "50/90 bps"
+      ],
+      "rows": [
+        [
+          "Fixed one-level",
+          "12.8327",
+          "36.6180",
+          "36.5611"
+        ],
+        [
+          "Adaptive one-rung",
+          "11.0270",
+          "30.7164",
+          "30.6693"
+        ],
+        [
+          "Adaptive five-rung",
+          "9.5065",
+          "26.7472",
+          "26.7060"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "D. Frozen sample",
+      "columns": [
+        "Item",
+        "Frozen value"
+      ],
+      "rows": [
+        [
+          "Product",
+          "BTC-USD"
+        ],
+        [
+          "One-minute OHLCV rows",
+          "5,837,137"
+        ],
+        [
+          "First timestamp",
+          "2015-07-20 00:00 UTC"
+        ],
+        [
+          "Last timestamp",
+          "2026-10-06 23:59 UTC"
+        ],
+        [
+          "Duplicate / out-of-order / invalid OHLC rows",
+          "0 / 0 / 0"
+        ],
+        [
+          "Below-USD-10 minute-notional rows",
+          "13,130"
+        ],
+        [
+          "Development cut",
+          "2022-04-13 00:00 UTC"
+        ],
+        [
+          "Test cut",
+          "2024-07-10 00:00 UTC"
+        ],
+        [
+          "Test obligations",
+          "588,240"
+        ],
+        [
+          "Cash per test counterfactual",
+          "USD 5,882,400"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "E. Registered primary result and decomposition",
+      "columns": [
+        "Metric",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Cash-weighted edge",
+          "9.5065 bps"
+        ],
+        [
+          "One-sided lower 95% bound",
+          "9.2565 bps"
+        ],
+        [
+          "Percentile upper 95% bound",
+          "9.7626 bps"
+        ],
+        [
+          "One-sided p-value vs 1 bp",
+          "0.00010"
+        ],
+        [
+          "Aggregate-unit edge",
+          "9.4487 bps"
+        ],
+        [
+          "Cash-weighted price component",
+          "-0.8710 bps"
+        ],
+        [
+          "Cash-weighted passive-fee component",
+          "+10.3775 bps"
+        ],
+        [
+          "Simulated passive cash share",
+          "69.27%"
+        ],
+        [
+          "Taker catch-up share",
+          "30.73%"
+        ],
+        [
+          "Average backlog",
+          "USD 134.31"
+        ],
+        [
+          "Maximum pre-catch-up backlog",
+          "USD 2,090.00"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "F. Registered strategy comparison",
+      "columns": [
+        "Strategy",
+        "Edge",
+        "Passive share",
+        "Average backlog"
+      ],
+      "rows": [
+        [
+          "Fixed one-level passive",
+          "12.8327 bps",
+          "95.60%",
+          "USD 67.92"
+        ],
+        [
+          "Adaptive one-rung",
+          "11.0270 bps",
+          "79.12%",
+          "USD 112.25"
+        ],
+        [
+          "Adaptive five-rung",
+          "9.5065 bps",
+          "69.27%",
+          "USD 134.31"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "G. Independent registered year episodes",
+      "columns": [
+        "Episode",
+        "Cash-weighted edge",
+        "Status"
+      ],
+      "rows": [
+        [
+          "2015",
+          "4.8555 bps",
+          "Partial year"
+        ],
+        [
+          "2016",
+          "4.1096 bps",
+          "Full year"
+        ],
+        [
+          "2017",
+          "2.6003 bps",
+          "Full year"
+        ],
+        [
+          "2018",
+          "5.4409 bps",
+          "Full year"
+        ],
+        [
+          "2019",
+          "7.3855 bps",
+          "Full year"
+        ],
+        [
+          "2020",
+          "8.1129 bps",
+          "Full year"
+        ],
+        [
+          "2021",
+          "9.4031 bps",
+          "Full year"
+        ],
+        [
+          "2022",
+          "10.3973 bps",
+          "Full year"
+        ],
+        [
+          "2023",
+          "8.8116 bps",
+          "Full year"
+        ],
+        [
+          "2024",
+          "9.3948 bps",
+          "Full year"
+        ],
+        [
+          "2025",
+          "9.5266 bps",
+          "Full year"
+        ],
+        [
+          "2026",
+          "9.5616 bps",
+          "Partial year"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "H. Registered operational sensitivities",
+      "columns": [
+        "Change from primary",
+        "Edge",
+        "Passive share"
+      ],
+      "rows": [
+        [
+          "Activation delay 0 min",
+          "11.7561 bps",
+          "76.72%"
+        ],
+        [
+          "Activation delay 1 min",
+          "9.5065 bps",
+          "69.27%"
+        ],
+        [
+          "Activation delay 2 min",
+          "-0.0438 bps",
+          "0.00%"
+        ],
+        [
+          "Participation 0.1%",
+          "9.4916 bps",
+          "69.16%"
+        ],
+        [
+          "Participation 100%",
+          "9.5066 bps",
+          "69.27%"
+        ],
+        [
+          "Full-on-breach catch-up",
+          "8.1850 bps",
+          "60.24%"
+        ],
+        [
+          "Age-cap catch-up",
+          "9.4825 bps",
+          "69.08%"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "I. Exploratory constant-fee scenarios",
+      "columns": [
+        "Strategy",
+        "Component",
+        "15/30",
+        "35/75",
+        "50/90"
+      ],
+      "rows": [
+        [
+          "Fixed one-level",
+          "Total edge",
+          "12.8327",
+          "36.6180",
+          "36.5611"
+        ],
+        [
+          "Adaptive one-rung",
+          "Total edge",
+          "11.0270",
+          "30.7164",
+          "30.6693"
+        ],
+        [
+          "Adaptive five-rung",
+          "Total edge",
+          "9.5065",
+          "26.7472",
+          "26.7060"
+        ],
+        [
+          "Adaptive five-rung",
+          "Price",
+          "-0.8710",
+          "-0.8710",
+          "-0.8710"
+        ],
+        [
+          "Adaptive five-rung",
+          "Fee",
+          "10.3775",
+          "27.6182",
+          "27.5770"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "J. Exploratory falling-market panels",
+      "columns": [
+        "Panel",
+        "Selection",
+        "Positive price observations"
+      ],
+      "rows": [
+        [
+          "D1",
+          "Negative full years: 2018, 2022, 2025",
+          "0 / 3"
+        ],
+        [
+          "D2",
+          "Five consecutive negative-month episodes",
+          "0 / 5"
+        ],
+        [
+          "D3",
+          "Seven severe negative months",
+          "2 / 7"
+        ],
+        [
+          "Combined",
+          "All observations",
+          "2 / 15"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "K.1 Initial slot sizes in a 31-day month",
+      "columns": [
+        "Slot",
+        "Monthly budget",
+        "One-level order",
+        "Five-rung child"
+      ],
+      "rows": [
+        [
+          "5 min",
+          "USD 2,500",
+          "USD 0.280",
+          "USD 0.056"
+        ],
+        [
+          "5 min",
+          "USD 10,000",
+          "USD 1.120",
+          "USD 0.224"
+        ],
+        [
+          "5 min",
+          "USD 100,000",
+          "USD 11.201",
+          "USD 2.240"
+        ],
+        [
+          "60 min",
+          "USD 2,500",
+          "USD 3.360",
+          "USD 0.672"
+        ],
+        [
+          "60 min",
+          "USD 10,000",
+          "USD 13.441",
+          "USD 2.688"
+        ],
+        [
+          "60 min",
+          "USD 100,000",
+          "USD 134.409",
+          "USD 26.882"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "K.2 Fractional-order branch",
+      "columns": [
+        "Slot",
+        "Strategy",
+        "35/75 edge",
+        "50/90 edge",
+        "35/75 passive share"
+      ],
+      "rows": [
+        [
+          "5 min",
+          "Fixed one-level",
+          "37.0716",
+          "37.0142",
+          "96.34%"
+        ],
+        [
+          "5 min",
+          "Adaptive one-rung",
+          "28.0981",
+          "28.0558",
+          "71.00%"
+        ],
+        [
+          "5 min",
+          "Adaptive five-rung",
+          "25.5483",
+          "25.5095",
+          "65.05%"
+        ],
+        [
+          "60 min",
+          "Fixed one-level",
+          "26.0523",
+          "26.0118",
+          "68.06%"
+        ],
+        [
+          "60 min",
+          "Adaptive one-rung",
+          "14.1318",
+          "14.1105",
+          "35.70%"
+        ],
+        [
+          "60 min",
+          "Adaptive five-rung",
+          "12.1106",
+          "12.0923",
+          "30.72%"
+        ]
+      ]
+    },
+    {
+      "source": "appendix.md",
+      "section": "K.3 Illustrative USD 5 minimum, 35/75 scenario",
+      "columns": [
+        "Slot",
+        "Monthly budget",
+        "Strategy",
+        "Edge",
+        "Passive share",
+        "Annual edge-value proxy"
+      ],
+      "rows": [
+        [
+          "5 min",
+          "USD 2,500",
+          "Fixed one",
+          "-0.3062",
+          "0.00%",
+          "USD -0.92"
+        ],
+        [
+          "5 min",
+          "USD 2,500",
+          "Adaptive five",
+          "-0.3062",
+          "0.00%",
+          "USD -0.92"
+        ],
+        [
+          "5 min",
+          "USD 10,000",
+          "Fixed one",
+          "-0.1762",
+          "0.00%",
+          "USD -2.11"
+        ],
+        [
+          "5 min",
+          "USD 10,000",
+          "Adaptive five",
+          "-0.1762",
+          "0.00%",
+          "USD -2.11"
+        ],
+        [
+          "5 min",
+          "USD 100,000",
+          "Fixed one",
+          "37.0633",
+          "96.34%",
+          "USD 4,447.60"
+        ],
+        [
+          "5 min",
+          "USD 100,000",
+          "Adaptive five",
+          "25.5434",
+          "65.04%",
+          "USD 3,065.21"
+        ],
+        [
+          "60 min",
+          "USD 2,500",
+          "Fixed one",
+          "25.8548",
+          "68.06%",
+          "USD 77.56"
+        ],
+        [
+          "60 min",
+          "USD 2,500",
+          "Adaptive five",
+          "-0.4484",
+          "0.00%",
+          "USD -1.35"
+        ],
+        [
+          "60 min",
+          "USD 10,000",
+          "Fixed one",
+          "26.0728",
+          "68.06%",
+          "USD 312.87"
+        ],
+        [
+          "60 min",
+          "USD 10,000",
+          "Adaptive five",
+          "-0.4347",
+          "0.00%",
+          "USD -5.22"
+        ],
+        [
+          "60 min",
+          "USD 100,000",
+          "Fixed one",
+          "26.0523",
+          "68.06%",
+          "USD 3,126.27"
+        ],
+        [
+          "60 min",
+          "USD 100,000",
+          "Adaptive five",
+          "12.1106",
+          "30.72%",
+          "USD 1,453.27"
+        ]
+      ]
+    }
+  ]
+}

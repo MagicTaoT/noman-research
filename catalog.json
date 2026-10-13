@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "title": "Noman Research",
+  "repository": "https://github.com/MagicTaoT/noman-research",
+  "website_url": "https://nomantrade.com/research/",
+  "papers": [
+    {
+      "id": "NR-2026-001",
+      "slug": "fee-aware-passive-dca",
+      "year": 2026,
+      "title": "Fee-Aware Passive DCA: Candle-Only Evidence and Retail-Scale Feasibility for Bitcoin Accumulation",
+      "author": "Tao Tao",
+      "version": "1.0",
+      "path": "papers/2026/fee-aware-passive-dca",
+      "release_tag": "fee-aware-passive-dca-v1.0",
+      "status": "working-paper-not-peer-reviewed",
+      "website_url": "https://nomantrade.com/research/can-limit-orders-improve-dca/"
+    }
+  ]
+}

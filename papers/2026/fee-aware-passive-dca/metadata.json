@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "NR-2026-001",
+  "slug": "fee-aware-passive-dca",
+  "title": "Fee-Aware Passive DCA: Candle-Only Evidence and Retail-Scale Feasibility for Bitcoin Accumulation",
+  "title_zh_CN": "费用感知型被动定投：比特币积累策略的 K 线证据与零售规模可行性",
+  "public_title": "Can Limit Orders Improve DCA? What 5.8 Million Bitcoin Candles Actually Show",
+  "authors": [{"name": "Tao Tao", "name_zh_CN": "陶涛", "affiliation": "Independent Researcher"}],
+  "version": "1.0",
+  "manuscript_date": "2026-10-09",
+  "github_publication_date": "2026-10-13",
+  "release_tag": "fee-aware-passive-dca-v1.0",
+  "status": "working-paper-not-peer-reviewed",
+  "license": "CC-BY-4.0",
+  "doi": null,
+  "website_url": "https://nomantrade.com/research/can-limit-orders-improve-dca/",
+  "release_url": "https://github.com/MagicTaoT/noman-research/releases/tag/fee-aware-passive-dca-v1.0",
+  "languages": [
+    {"code": "en", "manuscript": "paper.md", "appendix": "appendix.md", "pdf": "pdf/fee-aware-passive-dca-working-paper-v1.0.pdf", "role": "primary"},
+    {"code": "zh-CN", "manuscript": "paper.zh-CN.md", "appendix": "appendix.zh-CN.md", "pdf": "pdf/fee-aware-passive-dca-working-paper-v1.0-zh-CN.pdf", "role": "complete-translation"}
+  ],
+  "evidence": {
+    "market": "Coinbase BTC-USD spot",
+    "model": "candle-only",
+    "candle_rows": 5837137,
+    "first_date_utc": "2015-07-20",
+    "last_date_utc": "2026-10-06",
+    "registered_protocol": "MLDCA-EP-1.1",
+    "registered_protocol_sha256": "22cbbdcc33576bff02a77e1516def4d1f475cf88869521143fdc7ce2f13d8cc8",
+    "design_note": "Locked retrospective study after earlier exploration; not pristine out-of-sample evidence.",
+    "exploratory_extensions": ["fixed-fee repricing", "falling-market panels", "wealth identity", "retail budgets and order feasibility"]
+  },
+  "release_scope": {
+    "manuscripts": true,
+    "appendices": true,
+    "original_figures": true,
+    "aggregate_tables": true,
+    "raw_market_data": false,
+    "derived_market_records": false,
+    "backtest_engine": false,
+    "live_trading_code": false,
+    "full_experiment_reproducible_from_release_alone": false
+  }
+}

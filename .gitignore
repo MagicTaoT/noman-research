@@ -1,0 +1,27 @@
+# Public publication materials only; this is not a research data workspace.
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.db
+*.sqlite
+*.sqlite3
+*.parquet
+*.feather
+*.jsonl
+*.log
+data/
+raw/
+raw_data/
+private/
+secrets/
+credentials/
+backups/
+dist/
+tmp/
+node_modules/
